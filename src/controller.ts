@@ -52,3 +52,10 @@ try{
     return
 }
 }
+
+
+export const getusers=async(_req:Request,res:Response)=>{
+    const result=await collection1.find()
+    return res.status(200).json({result})
+
+}
