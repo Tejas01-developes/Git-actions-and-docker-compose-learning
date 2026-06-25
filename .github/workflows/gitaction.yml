@@ -28,9 +28,9 @@ jobs:
        run: yarn build      
      - name: Install railway cli  
        run: npm install -g @railway/cli
-     - name: Deploy to railway
+     - name: Deploy to railway  
        run: railway up --service ${{secrets.RAILWAY_SERVICE_ID}} --detach
        env: 
-        RAILWAY_TOKEN: ${{secrets.RAILWAY_TOKEN}}  
+        RAILWAY_API_TOKEN: ${{secrets.RAILWAY_TOKEN}}  
         RAILWAY_PROJECT_ID: ${{ secrets.RAILWAY_PROJECT_ID }}
               
