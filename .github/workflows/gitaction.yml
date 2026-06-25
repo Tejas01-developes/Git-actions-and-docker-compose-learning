@@ -27,7 +27,7 @@ jobs:
      - name: Typescript command
        run: yarn build      
      - name: Render Deploynment  
-       run: curl "${{secrets.RENDER_SECRET}}""
+       run: curl "${{secrets.RENDER_SECRET}}"
     
        
               
