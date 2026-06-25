@@ -26,11 +26,8 @@ jobs:
        run: yarn install
      - name: Typescript command
        run: yarn build      
-     - name: Install railway cli  
-       run: npm install -g @railway/cli
-     - name: Deploy to railway  
-       run: railway up --service ${{secrets.RAILWAY_SERVICE_ID}} --detach
-       env: 
-        RAILWAY_TOKEN: ${{secrets.RAILWAY_TOKEN}}  
+     - name: Render Deploynment  
+       run: curl "${{secrets.RENDER_SECRET}}""
+    
        
               
